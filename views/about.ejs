@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Triathlon race calculator</title>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    
+    <link rel="stylesheet" href="style.css" media="all" />
+	<link rel="stylesheet" href="style_desktop.css" media="(min-width: 1216px)" />
+	<link rel="stylesheet" href="style_tablet.css" media="(min-width: 675px) and (max-width: 1216px)"/>
+	<link rel="stylesheet" href="style_smartphone.css" media="(max-width: 675px)"/>
+
+    <script type="text/javascript" src="about_functions.js"></script>
+
+    <script async defer data-website-id="3ff50857-29ef-43c0-806f-d115b7edb240" src="https://stats.triathlon-calculator.app/umami.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div id="title_desc">
+            <h1><a href="/"><%= lingua.title %></a></h1>
+            <p><%= lingua.description %></p>
+        </div>
+
+        <div id="settings">
+            <div id="light_dark">
+                <div class="light_dark_icon">
+                    <img src="sun.png" alt="Sun">
+                </div>
+                <div id="toggle_switch">
+                    <input type="checkbox" id="toggle">
+                </div>
+                <div class="light_dark_icon">
+                    <img src="moon.png" alt="Moon">
+                </div>
+            </div>
+
+            <div id="languages">
+                <a href="?lang=en"><img class="language-image" alt="Image UK" src="united-kingdom.png"></a>
+                <a href="?lang=fr"><img class="language-image" alt="Image France" src="france.png"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="about_text">
+
+        <p><%= lingua.about_page.question_problem %><a href="mailto:antonin.info@protonmail.com">antonin.info@protonmail.com</a>.</p>
+
+        <hr>
+
+        <p><%= lingua.about_page.open_source %><a href="https://git.antonin.io/projets_personnels/triathlon_race_calculator" target="_blank"><%= lingua.about_page.sources_link %></a>.</p>
+
+        <hr>
+
+        <p><%= lingua.about_page.website_version %> : 1.0.</p>
+
+        <p><%= lingua.about_page.last_update %> : <%= lingua.about_page.last_update_date %></p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/**
+ * CSS file for all devices
+ */
+
+ /* Default light colors */
+ :root {
+  --background-color: #fcfcfd;
+  --text-color: #000000;
+
+  --link-color: #4682b4;
+  --link-color-hover: #2a4e6c;
+
+  --header-text-color: #ffffff;
+  --header-link-text-color: #ffffff;
+  --header-background-color: #4682b4;
+
+  --select-background-color: #E8E8E8;
+  --select-border-color: #4682b4;
+
+  --toogle-non-checked-color: #2D2F39;
+  --toogle-checked-color: #edc298;
+
+  --button-color: #4682b4;
+  --background-color-button: #ffffff;
+  --button-color-hover: #2a4e6c;
+
+  --input-text-color: #000000;
+  --input-border-bottom-color: #4682b4;
+  --input-background-color: #ffffff;
+
+  --background-color-container-app: #ffffff;
+
+  --slider-background-color: #ffffff;
+  --slider-range-thumb-color: #4682b4;
+  --slider-range-track-color: #e8e8e8;
+  --slider-range-progress-color: #4682b4;
+  --slider-border-thumb-color: #000000;
+
+  --footer-background-color: #E8E8E8;
+}
+
+ /* Dark colors */
+ /* Colors I could use : #273d54 with #1d2025 */
+[theme="dark"] {
+  --background-color: #1d2025;
+  --text-color: #ffffff;
+  --link-color: #edc298;
+  --link-color-hover: #e29b57;
+
+  --header-text-color: #ffffff;
+  --header-link-text-color: #edc298;
+  --header-background-color: #333c45;
+
+  --input-text-color: #ffffff;
+  --input-border-bottom-color: #edc298;
+  --input-background-color: #333c45;
+
+  --select-background-color: #1d2025;
+  --select-border-color: #edc298;
+
+  --button-color: #edc298;
+  --background-color-button: #333c45;
+  --button-color-hover: #e29b57;
+
+  --background-color-container-app: #333c45;
+
+  --slider-range-track-color: #ffffff;
+  --slider-range-progress-color: #edc298;
+  --slider-background-color: #333c45;
+  --slider-range-thumb-color: #edc298;
+
+  --footer-background-color: #333c45;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0; /* Disable margin around page */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+/* No colors and underline for links */
+a {
+  background-color: transparent;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  outline: 0;
+  color: var(--link-color-hover);
+}
+
+/* Remove basic button style */
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+#error_404 {
+  text-align: center;
+}

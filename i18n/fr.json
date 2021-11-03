@@ -1,0 +1,48 @@
+{
+    "title": "Triathlon race calculator",
+    "description": "Déterminez facilement vos allures de course en triathlon.",
+   
+    "units": {
+        "metric": "Système métrique",
+        "imperial": "Système impérial"
+    },
+
+    "distances": {
+        "choose_distance": "Choisissez votre distance de course : ",
+        "super_sprint": "Super Sprint",
+        "sprint": "Sprint",
+        "olympic": "Olympique",
+        "half_ironman": "Half Ironman",
+        "ironman": "Ironman",
+        "set_my_own": "Choisir mes distances"
+    },
+
+    "sports" : {
+        "swim": "Natation",
+        "t1": "Transition 1",
+        "bike": "Vélo",
+        "t2": "Transition 2",
+        "run": "Course à pied"
+    },
+
+    "time": {
+        "time_by_sport": "Temps par sport :",
+        "total_time": "Temps total :"
+    },
+
+    "footer": {
+        "enjoy_tool": "J'espère que vous appréciez cet outil et qu'il vous est utile! J'ai créé ce site et je le maintiens sur mon temps libre. L'hébergement de ce site me coûte quelques euros tous les mois, si vous souhaitez me soutenir, vous pouvez m'offrir un café :",
+        "if_you_like": "...si vous voulez",
+        "honest_content": "Pas de publicité, pas de liens affiliés, pas de cookies de tracking. Juste du contenu honnête. Merci.",
+        "about": "A propos de ce site"
+    },
+
+    "about_page": {
+        "question_problem": "Si vous remarquez un problème, ou que vous avez une remarque, une idée d'amélioration ou n'importe quelle question, contactez-moi à l'adresse ",
+        "open_source": "Le code source de l'application ou ouvert sous licence GPL 3. Vous pouvez consulter le code ",
+        "sources_link": "ici",
+        "website_version": "Version du site",
+        "last_update": "Date de dernière mise à jour",
+        "last_update_date": "3 novembre 2021."
+    }
+}

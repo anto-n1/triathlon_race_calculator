@@ -1,0 +1,48 @@
+{
+    "title": "Triathlon race calculator",
+    "description": "Easy tool to determine your pace on triathlon race.",
+
+    "units": {
+        "metric": "Metric system",
+        "imperial": "Imperial system"
+    },
+
+    "distances": {
+        "choose_distance": "Choose your race distance : ",
+        "super_sprint": "Super Sprint",
+        "sprint": "Sprint",
+        "olympic": "Olympic",
+        "half_ironman": "Half Ironman",
+        "ironman": "Ironman",
+        "set_my_own": "Set my own distances"
+    },
+
+    "sports" : {
+        "swim": "Swim",
+        "t1": "Transition 1",
+        "bike": "Bike",
+        "t2": "Transition 2",
+        "run": "Run"
+    },
+
+    "time": {
+        "time_by_sport": "Time by sport :",
+        "total_time": "Total time :"
+    },
+
+    "footer": {
+        "enjoy_tool": "I hope you enjoy this tool and that it is useful to you! I created this site and I maintain it on my free time. Also, server cost me a few dollars every month, so if you want to support me, you can offer me a coffe :",
+        "if_you_like": "...if you like",
+        "honest_content": "No third-party ads, no affiliate links, no tracking cookies. Just honest content. Thanks.",
+        "about": "About this website"
+    },
+
+    "about_page": {
+        "question_problem": "If you see a problem, or have any remarks or question, please contact me at ",
+        "open_source": "This application is open source and licensed under the GPL 3, you can read source code ",
+        "sources_link": "here",
+        "website_version": "Website version",
+        "last_update": "Last update",
+        "last_update_date": "November 3, 2021."
+    }
+}

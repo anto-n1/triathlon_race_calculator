@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Triathlon race calculator</title>
+
+	<meta name="description" content="Easy tool to determine your pace on triathlon race." />
+
+	<link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+	<link rel="stylesheet" href="style.css" media="all" />
+	<link rel="stylesheet" href="style_desktop.css" media="(min-width: 1216px)" />
+	<link rel="stylesheet" href="style_tablet.css" media="(min-width: 675px) and (max-width: 1216px)"/>
+	<link rel="stylesheet" href="style_smartphone.css" media="(max-width: 675px)"/>
+
+	<script type="text/javascript" src="verification.js"></script>
+	<script type="text/javascript" src="data_conversion.js"></script>
+	<script type="text/javascript" src="display.js"></script>
+
+	<script async defer data-website-id="3ff50857-29ef-43c0-806f-d115b7edb240" src="https://stats.triathlon-calculator.app/umami.js"></script>
+</head>
+
+<body>
+
+	<header>
+		
+		<div id="title_desc">
+			<h1><a href="/"><%= lingua.title %></a></h1>
+			<p><%= lingua.description %></p>
+		</div>
+		
+		<div id="settings">
+			<div id="light_dark">
+				<div class="light_dark_icon">
+					<img src="sun.png" alt="Sun"> 
+				</div>
+				<div id="toggle_switch">
+					<input type="checkbox" id="toggle">
+				</div>
+				<div class="light_dark_icon">
+					<img src="moon.png" alt="Moon">
+				</div>
+			</div>
+
+			<div id="languages">
+				<a href="?lang=en" id="language_en_button"><img class="language-image" alt="Image UK" src="united-kingdom.png"></a>
+				<a href="?lang=fr" id="language_fr_button"><img class="language-image" alt="Image France" src="france.png"></a>
+			</div>
+		</div>
+
+	</header>
+  
+	<div id="container_app">
+
+		<select name="unit" id="unit_distances">
+			<option  selected="selected" value="metric"><%= lingua.units.metric %></option>
+			<option value="imperial"><%= lingua.units.imperial %></option>
+		</select>
+
+		<div id="container_distances">
+			
+			<div id="choose_distances">
+				<div id="choose_distances_title">
+					<p><%= lingua.distances.choose_distance %></p>
+				</div>
+				<div id="choose_distances_buttons">
+					<button class="choose_distances_button" id="choose_distances_super_sprint"><%= lingua.distances.super_sprint %></button>
+					<button class="choose_distances_button" id="choose_distances_sprint"><%= lingua.distances.sprint %></button>
+					<button class="choose_distances_button" id="choose_distances_olympic"><%= lingua.distances.olympic %></button>
+					<button class="choose_distances_button" id="choose_distances_half_ironman"><%= lingua.distances.half_ironman %></button>
+					<button class="choose_distances_button" id="choose_distances_ironman"><%= lingua.distances.ironman %></button>
+					<button class="choose_distances_button" id="choose_distances_choice"><%= lingua.distances.set_my_own %></button>
+				</div>
+			</div>
+
+			<div id="display_distances">
+				<div class="display_distances_input">
+					<p><%= lingua.sports.swim %> : </p>
+					<input class="input_distance_sports" id="input_distance_swim" value="1500"
+						oninput="apply_css_input_distance('input_distance_swim')">
+					<p><span id="distance_unit_swim"></span></p>
+				</div>
+				<div class="display_distances_input">
+					<p><%= lingua.sports.bike %> : </p>
+					<input class="input_distance_sports" id="input_distance_bike" value="40"
+						oninput="apply_css_input_distance('input_distance_bike')">
+					<p><span id="distance_unit_bike"></span></p>
+				</div>
+				<div class="display_distances_input">
+					<p><%= lingua.sports.run %> : </p>
+					<input class="input_distance_sports" id="input_distance_run" value="10"
+						oninput="apply_css_input_distance('input_distance_run')">
+					<p><span id="distance_unit_run"></span></p>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="container_sliders">
+
+			<div class="container_slider_with_text">
+				<label for="slider_swim"><%= lingua.sports.swim %></label>
+				<input orient="vertical" type="range" name="slider_swim" min="45" max="180" value="120" step="1"
+					class="slider" id="slider_swim">
+				<div class=input_time>
+					<input class="input_pace_sports" id="input_swim"
+						oninput="apply_css_input_pace_swim_and_apply_on_slider()" maxlength="5">
+					<p><span id="speed_unit_swim"></span></p>
+				</div>
+			</div>
+
+			<div class="container_slider_with_text">
+				<label for="slider_t1"><%= lingua.sports.t1 %></label>
+				<input orient="vertical" type="range" name="slider_t1" min="0" max="600" value="120" step="1"
+					class="slider" id="slider_t1">
+
+				<div class=input_time>
+					<input class="input_pace_sports" id="input_t1"
+						oninput="apply_css_input_pace_t1_and_apply_on_slider()" maxlength="5">
+					<p>mn:s</p>
+				</div>
+			</div>
+
+			<div class="container_slider_with_text">
+				<label for="slider_bike"><%= lingua.sports.bike %></label>
+				<input orient="vertical" type="range" name="slider_bike" min="15" max="50" value="30" step="0.1"
+					class="slider" id="slider_bike">
+
+				<div class=input_time>
+					<input class="input_pace_sports" id="input_bike"
+						oninput="apply_css_input_pace_bike_and_apply_on_slider()" maxlength="4">
+					<p><span id="speed_unit_bike"></span></p>
+				</div>
+			</div>
+
+			<div class="container_slider_with_text">
+				<label for="slider_t2"><%= lingua.sports.t2 %></label>
+				<input orient="vertical" type="range" name="slider_t2" min="0" max="600" value="120" step="1"
+					class="slider" id="slider_t2">
+				<div class=input_time>
+					<input class="input_pace_sports" id="input_t2"
+						oninput="apply_css_input_pace_t2_and_apply_on_slider()" maxlength="5">
+					<p>mn:s</p>
+				</div>
+			</div>
+
+			<div class="container_slider_with_text">
+				<label for="slider_run"><%= lingua.sports.run %></label>
+				<input orient="vertical" type="range" name="slider_run" min="160" max="644" value="300" step="1"
+					class="slider" id="slider_run">
+
+				<div class=input_time>
+					<input class="input_pace_sports" id="input_run"
+						oninput="apply_css_input_pace_run_and_apply_on_slider()" maxlength="5">
+					<p><span id="speed_unit_run"></span></p>
+					<p>(<span id="display_run_value_kmh"></span> <span id="speed_unit_run_2"></span>)</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="container_total_times">
+
+			<div id="display_time_title">
+				<p><%= lingua.time.time_by_sport %></p>
+			</div>
+
+			<div id="container_total_times_sports">
+				<p><%= lingua.sports.swim %> : <span id="display_time_swim"></span></p>
+				<p><%= lingua.sports.t1 %> : <span id="display_time_t1"></span></p>
+				<p><%= lingua.sports.bike %> : <span id="display_time_bike"></span></p>
+				<p><%= lingua.sports.t2 %> : <span id="display_time_t2"></span></p>
+				<p><%= lingua.sports.run %> : <span id="display_time_run"></span></p>
+			</div>
+
+			<div id="display_total_time_title">
+				<p><%= lingua.time.total_time %></p>
+			</div>
+
+			<div id="container_total_time">
+				<p><span id="display_time_total"></span></p>
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+
+		<p>Made with &#10084;&#65039; from &#127467;&#127479;</p>
+
+		<p><%= lingua.footer.enjoy_tool %></p>
+
+		<a id="buy_me_a_coffee" href="https://ko-fi.com/antonin" target="_blank"><img id="buy_me_a_coffee_img" onmouseover="on_hover()" onmouseout="off_hover();" src="buy_me_a_coffee.png" alt="Buy me a coffee"></a>
+
+		<p><%= lingua.footer.if_you_like %> &#128578;</p>
+		
+		<p><%= lingua.footer.honest_content %></p>
+		
+		<a href="about"><%= lingua.footer.about %></a>
+
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+/**
+ * CSS file for desktop
+ */
+
+/**
+ * HEADER
+ */
+
+header {
+  padding: 20px;
+  color: var(--header-text-color);
+  text-align: center;
+  background-color: var(--header-background-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header a,
+header a:hover {
+  color: var(--header-link-text-color);
+}
+
+header p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 27px;
+  right: 30px;
+}
+
+/* Dark mode buttons and images */
+#light_dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+/* Margin at left and right of toogle */
+#light_dark div:nth-child(2) {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.light_dark_icon img {
+  height: 15px;
+}
+
+#toggle {
+  height: 20px;
+  width: 40px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border: 2px solid var(--toogle-non-checked-color);
+  background: var(--toogle-non-checked-color);
+  transition: all 0.2s ease;
+}
+
+#toggle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white; /* Toogle color */
+  /*box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);*/
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+#toggle:checked {
+  border: 2px solid var(--toogle-checked-color);
+  background: var(--toogle-checked-color);
+}
+#toggle:checked:after {
+  transform: translatex(20px);
+}
+
+/* Languages */
+
+#languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+#languages img {
+  width: 20px;
+}
+
+/* Margin at left and right of toogle */
+#languages img:nth-child(1) {
+  margin-right: 6px;
+}
+/* Margin at left and right of toogle */
+#languages img:nth-child(2) {
+  margin-left: 6px;
+}
+
+/**
+ * RACE DISTANCES CHOICE
+ */
+
+#unit_distances {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+select {
+  /*Clear the default select box style*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;  
+  border: 1px solid var(--select-border-color);
+  padding: 1em 1em 1em 1em;
+  margin: 0;
+  border-radius: 3%;
+  padding: 0.25em 0.5em;
+  background-color: var(--select-background-color);
+  color: var(--text-color);
+  box-shadow: none;
+  outline-color: var(--select-border-color);
+  outline: 0;
+  text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Input for distances */
+.input_distance_sports,
+.input_pace_sports {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: var(--input-border-bottom-color) 1px solid;
+  height: 25px;
+  width: 50px;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 15px;
+  color: var(--input-text-color);
+  background-color: var(--input-background-color);
+}
+
+/* Input for distances */
+.input_distance_sports:focus,
+.input_pace_sports:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: var(--input-border-bottom-color) 1px solid;
+  outline: none;
+}
+
+#container_app {
+  box-shadow: 0 3px 6px rgba(11, 33, 74, 0.09), 0 -2px 2px rgba(11, 33, 74, 0.03);
+  padding: 27px 20px 9px 20px;
+  margin: 20px 5% 20px 5%;
+  background-color: var(--background-color-container-app);
+  border-radius: 1%;
+  position: relative; /* Used to place the unit choice */
+}
+
+/* Display choice distances buttons in center of the page */
+#choose_distances {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Display input distances buttons in center of the page */
+#display_distances {
+  display: flex;
+  justify-content: center;
+}
+
+#choose_distances_buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#choose_distances_buttons button {
+  display: flex;
+  justify-content: center;
+  color: var(--button-color);
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 10%;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: var(--background-color-button);
+  padding: 4px;
+}
+
+#choose_distances_buttons button:hover {
+  display: flex;
+  justify-content: center;
+  color: var(--button-color-hover);
+  font-weight: bold;
+}
+
+/* Title in bold */
+#choose_distances_title {
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+#choose_distances_title p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Name of sport and input of distances : display input and unit side by side */
+.display_distances_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/**
+   * SLIDERS AND PACE DISPLAYING
+   */
+
+/* All sliders horizontally */
+#container_sliders {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space between displaying distances and sliders */
+  margin-bottom: 20px; /* Space between displaying times and sliders */
+}
+
+/* Each container slider (sport name, slider, pace displaying) */
+.container_slider_with_text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 230px; /* Width of a slider */
+}
+
+.container_slider_with_text input[type="range"] {
+  -webkit-appearance: slider-vertical; /* Vertical slider for chrome, IE */
+  height: 120px;
+}
+
+/* Slider for Firefox */
+
+/* The slider handle (-moz- is for Firefox) to override default look) */
+.slider::-moz-range-thumb {
+  width: 16px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  border: 1px solid var(--slider-border-thumb-color);
+  cursor: pointer; /* Cursor on hover */
+  background: var(--slider-range-thumb-color); /* Color background */
+  border-radius: 0 !important;
+}
+
+/* Le fond du slider */
+.slider::-moz-range-track {
+  width: 10px;
+  background-color: var(--slider-range-track-color);
+}
+
+.slider::-moz-range-progress {
+  background-color: var(--slider-range-progress-color);
+  width: 10px;
+}
+
+.slider {
+  background-color: var(--slider-background-color);
+}
+
+/* Slider for Chrome, Edge, Safari */
+
+/* The slider handle (use -webkit- is for Chrome, Opera, Safari, Edge) to
+  override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  border: 1px solid var(--slider-border-thumb-color);
+  cursor: pointer; /* Cursor on hover */
+  background: var(--slider-range-thumb-color);
+  border-radius: 0 !important;
+}
+
+/*.slider::-webkit-slider-runnable-track {
+  background: var(--slider-range-track-color);
+  /*width: 10px;
+}*/
+/*
+.slider::-webkit-progress-value {
+  background-color: var(--slider-range-progress-color);
+}*/
+
+/* Display input pace and unit side by side */
+.input_time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Size of input pace */
+.input_pace_sports {
+  width: 50px;
+}
+
+/**
+   * TOTAL TIMES
+   */
+
+/* Center the titles in time section bold them */
+#display_time_title,
+#display_total_time_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Display all times horizontally */
+#container_total_times_sports {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+/* Each time with his name  */
+#container_total_times_sports p {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Displaying total time */
+#container_total_time {
+  text-align: center;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+#display_time_swim,
+#display_time_run,
+#display_time_bike,
+#display_time_t1,
+#display_time_t2 {
+  font-weight: bold;
+}
+
+/**
+ * FOOTER
+ */
+
+footer {
+  background-color: var(--footer-background-color);
+  text-align: center;
+  padding: 20px 7% 20px 7%;
+}
+
+footer p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+}
+
+#buy_me_a_coffee img {
+  width: 180px;
+}
+
+/**
+ * ABOUT PAGE
+ */
+
+#about_text {
+  margin-top: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+hr {
+  width: 50%;
+  border: 1px solid var(--button-color);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
