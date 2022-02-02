@@ -1,5 +1,11 @@
 # RELEASE NOTES
 
+## 1.1 - In development, no release date
+
+Expecteed in this version :
+
+* Website is responsive and usable on mobile devices
+
 ## 1.0 - November 2, 2021
 
 First version of the application!

@@ -6,10 +6,10 @@
 
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     
-    <link rel="stylesheet" href="style.css" media="all" />
-	<link rel="stylesheet" href="style_desktop.css" media="(min-width: 1216px)" />
-	<link rel="stylesheet" href="style_tablet.css" media="(min-width: 675px) and (max-width: 1216px)"/>
-	<link rel="stylesheet" href="style_smartphone.css" media="(max-width: 675px)"/>
+    <link rel="stylesheet" type="text/css"  href="style.css" media="all" />
+	<link rel="stylesheet" type="text/css"  href="style_desktop.css" media="(min-width: 1216px)" />
+	<link rel="stylesheet" type="text/css"  href="style_tablet.css" media="(min-width: 675px) and (max-width: 1216px)"/>
+	<link rel="stylesheet" type="text/css"  href="style_smartphone.css" media="(max-width: 675px)"/>
 
     <script type="text/javascript" src="about_functions.js"></script>
 
@@ -58,6 +58,8 @@
         <p><%= lingua.about_page.website_version %> : 1.0.</p>
 
         <p><%= lingua.about_page.last_update %> : <%= lingua.about_page.last_update_date %></p>
+
+        <p><a href="https://git.antonin.io/projets_personnels/triathlon_race_calculator/src/master/RELEASE_NOTES.md" target="_blank"> <%= lingua.about_page.update_history %> </a></p>
 
     </div>
 
