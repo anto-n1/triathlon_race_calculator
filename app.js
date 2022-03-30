@@ -1,3 +1,5 @@
+console.log("Starting app...");
+
 var express = require("express");
 var path = require("path");
 var lingua  = require("lingua");
@@ -50,4 +52,5 @@ app.get("*", function(req, res) {
 });
 
 // Run server
-app.listen(http_port)
+app.listen(http_port);
+console.log("Application started.");

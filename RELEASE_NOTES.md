@@ -2,9 +2,14 @@
 
 ## 1.1 - In development, no release date
 
+Improvments in this version :
+
+* ...
+
 Expecteed in this version :
 
 * Website is responsive and usable on mobile devices
+* Fix error when changing language
 
 ## 1.0 - November 2, 2021
 

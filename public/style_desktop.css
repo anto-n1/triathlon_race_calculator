@@ -374,6 +374,9 @@ footer {
   background-color: var(--footer-background-color);
   text-align: center;
   padding: 20px 7% 20px 7%;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 
 footer p {

@@ -2,7 +2,6 @@
  * display.js : do stuff for sliders (abstract to improve)
  */
 
-
 /**
  * Apply CSS on input distances if bad format.
  * 
@@ -850,12 +849,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     /**
      * Browser language - used to know what language use to display units
-    
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     var language = urlParams.get('lang')
 
-    sessionStorage.setItem("lang", language);
+    //sessionStorage.setItem("lang", language);
     console.log("La langue avant est  : " + sessionStorage.getItem("lang"));
 
     // Know the language
@@ -877,6 +876,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         console.log("La langue est 3 : " + sessionStorage.getItem("lang"));
     });
 
-    //console.log("La langue est 2 : " + sessionStorage.getItem("lang"));*/
-
+    console.log("La langue est 2 : " + sessionStorage.getItem("lang"));
+    */
+   
 });

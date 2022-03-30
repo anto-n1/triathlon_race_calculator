@@ -50,14 +50,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
          if (current_theme == "dark") {
              // We apply light theme
              // If we dont re-apply on each input, there are problems when changing theme...
-
  
              switch_to_theme = "light";
  
              sessionStorage.setItem("theme", "light");
  
          } else {
-
  
              switch_to_theme = "dark";
  
@@ -68,4 +66,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
          // Set our currenet theme to the new one
          document.documentElement.setAttribute("theme", switch_to_theme);
      }
+
+
+    /*
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     var language = urlParams.get('lang')
+ 
+     console.log("La langue avant est  : " + sessionStorage.getItem("lang"));
+ 
+     // Know the language
+     if (sessionStorage.getItem("lang") == "null") {
+         language = navigator.language;
+         sessionStorage.setItem("lang", language);
+         console.log("La langue est 1 : " + sessionStorage.getItem("lang"));
+     }
+ 
+     document.getElementById("language_en_button").addEventListener("click", function () {
+         language = "en";
+         sessionStorage.setItem("lang", language);
+         console.log("La langue est 2 : " + sessionStorage.getItem("lang"));
+     });
+ 
+     document.getElementById("language_fr_button").addEventListener("click", function () {
+         language = "fr";
+         sessionStorage.setItem("lang", language);
+         console.log("La langue est 3 : " + sessionStorage.getItem("lang"));
+     });
+ 
+     console.log("La langue est 2 : " + sessionStorage.getItem("lang"));
+    */
+
 });
