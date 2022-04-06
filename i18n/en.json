@@ -31,9 +31,6 @@
     },
 
     "footer": {
-        "enjoy_tool": "I hope you enjoy this tool and that it is useful to you! I created this site and I maintain it on my free time. Also, server cost me a few dollars every month, so if you want to support me, you can offer me a coffe :",
-        "if_you_like": "...if you like",
-        "honest_content": "No third-party ads, no affiliate links, no tracking cookies. Just honest content. Thanks.",
         "about": "About this website"
     },
 
@@ -44,6 +41,9 @@
         "website_version": "Website version",
         "last_update": "Last update",
         "last_update_date": "March 30, 2022.",
-        "update_history": "See update history."
+        "update_history": "See update history.",
+        "enjoy_tool": "I hope you enjoy this tool and that it is useful to you! I created this site and I maintain it on my free time. Also, server cost me a few dollars every month, so if you want to support me, you can offer me a coffe :",
+        "if_you_like": "...if you like",
+        "honest_content": "No third-party ads, no affiliate links, no tracking cookies. Just honest content."
     }
 }

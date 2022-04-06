@@ -31,9 +31,6 @@
     },
 
     "footer": {
-        "enjoy_tool": "J'espère que vous appréciez cet outil et qu'il vous est utile! J'ai créé ce site et je le maintiens sur mon temps libre. L'hébergement de ce site me coûte quelques euros tous les mois, si vous souhaitez me soutenir, vous pouvez m'offrir un café :",
-        "if_you_like": "...si vous voulez",
-        "honest_content": "Pas de publicité, pas de liens affiliés, pas de cookies de tracking. Juste du contenu honnête. Merci.",
         "about": "A propos de ce site"
     },
 
@@ -44,6 +41,9 @@
         "website_version": "Version du site",
         "last_update": "Date de dernière mise à jour",
         "last_update_date": "30 mars 2022.",
-        "update_history": "Voir l'historique des mises à jour."
+        "update_history": "Voir l'historique des mises à jour.",
+        "enjoy_tool": "J'espère que vous appréciez cet outil et qu'il vous est utile! J'ai créé ce site et je le maintiens sur mon temps libre. L'hébergement de ce site me coûte quelques euros tous les mois, si vous souhaitez me soutenir, vous pouvez m'offrir un café :",
+        "if_you_like": "...si vous voulez",
+        "honest_content": "Pas de publicité, pas de liens affiliés, pas de cookies de tracking. Juste du contenu honnête."
     }
 }

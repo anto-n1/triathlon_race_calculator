@@ -8,7 +8,7 @@ An instance of the application is available at [triathlon-calculator.app](https:
 Run and develop locally the application :
 
 ```bash
-git clone https://git.antonin.io/projets_personnels/triathlon_race_calculator.git
+git clone https://github.com/anto-n1/triathlon_race_calculator.git
 cd triathlon_race_calculator/
 npm install
 node app.js
